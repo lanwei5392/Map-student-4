@@ -1,3 +1,10 @@
 #map {
 	height: 100%;
 }
+
+
+html, body {
+	height: 100%;
+	maring: 0;
+	padding: 0;
+}
