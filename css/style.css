@@ -20,7 +20,7 @@ h1 {
 
 #map {
 	border: 2px solid #D3D3D3;
-	border-radius: 30px;
+	border-radius: 20px;
 	bottom:0px;
 	left: 360px;
 	position: absolute;
@@ -32,7 +32,7 @@ h1 {
 	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/8f/50/0f/8f500f513104b96225df27518bc8d95e.jpg");
 	background-color: #D3D3D3;
 	border: 2px solid gray;
-	border-radius: 30px;
+	border-radius: 20px;
 	height: 100%;
 	line-height: 35px;
 	padding: 10px 10 px 30px 10px;
@@ -41,9 +41,9 @@ h1 {
 }
 
 
-
 .list-box {
   margin: 30px;
+  border-radius: 20px;
   background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.6;
