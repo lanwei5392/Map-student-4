@@ -14,7 +14,7 @@
                 <h1>Sacramento Landmarks</h1>
                 <div class="listings">
                     <form id="form-container" class="form-container">
-                     <input type="text" id="street" value="">
+                     <input type="text" id="hide-listings" value="">
                      <button id="submit-btn">Submit</button>
                  </form>
                     <div>
@@ -51,11 +51,34 @@
                     id: i 
 
                 });
+                //Put markers on screen
                 markers.push(marker);
+                //Open an infowindow when marker is clicked
                 marker.addListener('click', function(){
                     populateInfoWindow(this, largeInfowindow);
                 })
             }
+            document.getElementById('hide-listings').addEventListener('click', hideListings);
+            }
+
+      // This function populates the infowindow when the marker is clicked. We'll only allow
+      // one infowindow which will open at the marker that is clicked, and populate based
+      // on that markers position.
+
+            function populateInfoWindow(marker, infowindow) {
+                //Make sure infowindow is closed
+                if (infowindow.marker != marker) {
+                    infowindow.marker = marker;
+                    infowindow.setContent('<div>' + marker.title + '</div>');
+                    infowindow.open(map, marker):
+                    //Clear marker property when our infowindow is closed
+                    infowindow.addListener('closeclick', function() {
+                        infowindow.marker = null;
+                    });
+                }
+            }
+
+
 
 
     	</script>
