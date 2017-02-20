@@ -38,6 +38,26 @@
         		}); 
 
       		}
+
+            var largeInfowindow = new google.maps.InfoWindow();
+
+            for (var i = 0; i < locations.length; i++) {
+                var position = initialMarkers[i].position;
+                var title = locations[i].title;
+                var marker = new google.maps.Marker({
+                    position: position
+                    title: title,
+                    animation: google.maps.Animation.DROP,
+                    id: i 
+
+                });
+                markers.push(marker);
+                marker.addListener('click', functin(){
+                    populateInfoWindow(this, largeInfowindow);
+                })
+            }
+
+
     	</script>
 
     	<!--Loaded the Javascript API asynchronously -->
