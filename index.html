@@ -38,27 +38,27 @@
         		}); 
 
 
-            var locations = new Array();
+                var locations = new Array();
 
-            locations[0] = new google.maps.LatLng(38.576946, -121.493626);
-            locations[1] = new google.maps.LatLng(38.572534, -121.471202);
-            locations[2] = new google.maps.LatLng(38.580464, -121.484859);
+                locations[0] = new google.maps.LatLng(38.576946, -121.493626);
+                locations[1] = new google.maps.LatLng(38.572534, -121.471202);
+                locations[2] = new google.maps.LatLng(38.580464, -121.484859);
 
-            //Now store marker in our array
-            var pointMarker = new Array();
+                //Now store marker in our array
+                var pointMarker = new Array();
 
-            function setMarkers() {
-                for(var i=0; i<locations.length; i++){
-                    pointMarker[i] = new google.maps.Marker({
-                        position: location[i],
-                        map: map,
-                        animation: google.maps.Animation.BOUNCE,
-                        title: "location"+ i
-                    })
+                function setMarkers() {
+                    for(var i=0; i<locations.length; i++){
+                        pointMarker[i] = new google.maps.Marker({
+                            position: location[i],
+                            map: map,
+                            animation: google.maps.Animation.BOUNCE,
+                            title: "location"+ i
+                        })
+
+                    }
 
                 }
-
-            }
 
 
 
