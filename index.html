@@ -42,24 +42,26 @@
                 locations[1] = new google.maps.LatLng(38.572534, -121.471202);
                 locations[2] = new google.maps.LatLng(38.580464, -121.484859);
 
-
-                //Now store marker in our array
-                var pointMarker = new Array();
+            
 
                 function setMarkers() {
                     for(var i=0; i<locations.length; i++){
-                        pointMarker[i] = new google.maps.Marker({
+                        locations[i] = new google.maps.Marker({
                             position: locations[i],
                             map: map,
                             animation: google.maps.Animation.DROP,
-                            title: "location"+ i
+                            title: "locations"+ i
+
                         })
 
                     }
+
+
                 }
                 setMarkers();
 
       		}
+                
 
 
     	</script>
