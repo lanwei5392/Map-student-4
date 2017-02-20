@@ -58,8 +58,10 @@
                 //Open an infowindow when marker is clicked
                 marker.addListener('click', function(){
                     populateInfoWindow(this, largeInfowindow);
-                })
+                });
             }
+            //Fit map to new bounds
+            map.fitBounds(bounds);
             //Hide markers when user is about to search
             document.getElementById('hide-listings').addEventListener('click', hideListings);
             
