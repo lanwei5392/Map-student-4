@@ -41,10 +41,10 @@
 
             var largeInfowindow = new google.maps.InfoWindow();
 
-            for (var i = 0; i < locations.length; i++) {
+            for (var i = 0; i < initialMarkers.length; i++) {
                 //Get our position from our markers
                 var position = initialMarkers.position;
-                var title = locations.title;
+                var title = initialMarkers.title;
                 var marker = new google.maps.Marker({
                     map: map,
                     position: position,
