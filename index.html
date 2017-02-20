@@ -58,8 +58,7 @@
                     populateInfoWindow(this, largeInfowindow);
                 })
             }
-            document.getElementById('hide-listings').addEventListener('click', hideListings);
-            }
+            document.getElementById('show-listings').addEventListener('click', showListings);
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
       // one infowindow which will open at the marker that is clicked, and populate based
@@ -70,7 +69,7 @@
                 if (infowindow.marker != marker) {
                     infowindow.marker = marker;
                     infowindow.setContent('<div>' + marker.title + '</div>');
-                    infowindow.open(map, marker):
+                    infowindow.open(map, marker);
                     //Clear marker property when our infowindow is closed
                     infowindow.addListener('closeclick', function() {
                         infowindow.marker = null;
