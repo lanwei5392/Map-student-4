@@ -66,9 +66,9 @@
         			center: {lat: 38.576661, lng: -121.493637},
           			zoom: 13
         		}); 
-                
-                var bounds = new google.maps.LatLngBounds();
+                //
                 var largeInfowindow = new google.mapsInfoWindow();
+                var bounds = new google.maps.LatLngBounds();
                 for (var i = 0; i < locations.length; i++) {
                     //Get our position from our array of locations
                     var position = locations[i].location;
@@ -78,15 +78,21 @@
                         position: position,
                         content: content,
                         title: title,
-                        animaation: google.maps.Animation.BOUNCE,
+                        animation: google.maps.Animation.BOUNCE,
                         id: i
                     })
                 markers.push(marker);
                 bounds.extend(marker.position);
+                marker.addListener('click',, function() {
+                    populateInfoWindow(largeInfowindow);
+                })
 
 
                 }
 
+            function populateInfoWindow(marker, infowindow) {
+
+            }
 
 
       		}
