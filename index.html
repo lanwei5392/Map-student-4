@@ -45,14 +45,14 @@
                 var position = initialMarkers[i].position;
                 var title = locations[i].title;
                 var marker = new google.maps.Marker({
-                    position: position
+                    position: position,
                     title: title,
                     animation: google.maps.Animation.DROP,
                     id: i 
 
                 });
                 markers.push(marker);
-                marker.addListener('click', functin(){
+                marker.addListener('click', function(){
                     populateInfoWindow(this, largeInfowindow);
                 })
             }
