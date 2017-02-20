@@ -79,6 +79,17 @@
             }
 
 
+            //Loop through our markers array
+            function showListings() {
+                var bounds = new google.maps.LatLngBounds();
+                //Display markers, extend boundaries of the map to do so
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                    bounds.extend(markers[i].position);
+                }
+                map.fitBounds(bounds);
+            }
+
 
 
     	</script>
