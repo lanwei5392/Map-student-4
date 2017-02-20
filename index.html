@@ -50,7 +50,7 @@
                 function setMarkers() {
                     for(var i=0; i<locations.length; i++){
                         pointMarker[i] = new google.maps.Marker({
-                            position: location[i],
+                            position: locations[i],
                             map: map,
                             animation: google.maps.Animation.BOUNCE,
                             title: "location"+ i
