@@ -83,9 +83,8 @@
                 }
             }
 
-
             //Loop through our markers array
-            function showListings() {
+            function displayListings() {
                 var bounds = new google.maps.LatLngBounds();
                 //Display markers, extend boundaries of the map to do so
                 for (var i = 0; i < markers.length; i++) {
@@ -96,11 +95,11 @@
             }
 
 
-            //function hideListings() {
-            //    for (var i = 0; i < markers.length; i++) {
-              //      markers[i].setMap(null);
-                //}
-            //}
+            function hideListings() {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+            }
 
     	</script>
 
