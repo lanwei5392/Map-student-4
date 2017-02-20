@@ -21,7 +21,6 @@ h1 {
 
 #map {
 	border: 2px solid #D3D3D3;
-	border-radius: 20px;
 	bottom:0px;
 	left: 360px;
 	position: absolute;
@@ -32,7 +31,6 @@ h1 {
 .sidebar {
 	background-image: url("http://www.nannygoatsinpanties.com/wp-content/uploads/2013/03/sacramento-capitol-1000x1000.jpg");
 	border: 2px solid #D3D3D3;
-	border-radius: 20px;
 	height: 100%;
 	line-height: 35px;
 	padding: 5px 5 px 5px 5px;
@@ -43,7 +41,6 @@ h1 {
 
 .listings {
   margin: 30px;
-  border-radius: 20px;
   background-color: #ffffff;
   border: 1px solid #D3D3D3;
   opacity: 0.6;
