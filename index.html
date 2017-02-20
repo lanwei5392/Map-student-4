@@ -38,69 +38,11 @@
         		}); 
 
       		}
-
-            var largeInfowindow = new google.maps.InfoWindow();
-
-            for (var i = 0; i < initialMarkers.length; i++) {
-                //Get our position from our markers
-                var position = initialMarkers.position;
-                var title = initialMarkers.title;
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: position,
-                    title: title,
-                    animation: google.maps.Animation.DROP,
-                    id: i 
-
-                });
-                //Put markers on screen
-                markers.push(marker);
-                //Open an infowindow when marker is clicked
-                marker.addListener('click', function(){
-                    populateInfoWindow(this, largeInfowindow);
-                });
-            }
-            //Fit map to new bounds
-            map.fitBounds(bounds);
-            //Hide markers when user is about to search
-            document.getElementById('hide-listings').addEventListener('click', hideListings);
-            
-
-      // This function populates the infowindow when the marker is clicked. We'll only allow
-      // one infowindow which will open at the marker that is clicked, and populate based
-      // on that markers position.
-
-            function populateInfoWindow(marker, infowindow) {
-                //Make sure infowindow is closed
-                if (infowindow.marker != marker) {
-                    infowindow.marker = marker;
-                    infowindow.setContent('<div>' + marker.title + '</div>');
-                    infowindow.open(map, marker);
-                    //Clear marker property when our infowindow is closed
-                    infowindow.addListener('closeclick', function() {
-                        infowindow.marker = null;
-                    });
-                }
-            }
-
-            //Loop through our markers array
-            function displayListings() {
-                var bounds = new google.maps.LatLngBounds();
-                //Display markers, extend boundaries of the map to do so
-                for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(map);
-                    bounds.extend(markers[i].position);
-                }
-                map.fitBounds(bounds);
-            }
+           
 
 
-            function hideListings() {
-                for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(null);
-                }
-            }
 
+           
     	</script>
 
     	<!--Loaded the Javascript API asynchronously -->
