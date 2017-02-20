@@ -30,13 +30,12 @@ h1 {
 }
 
 .listings {
-	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/8f/50/0f/8f500f513104b96225df27518bc8d95e.jpg");
-	background-color: #D3D3D3;
-	border: 2px solid gray;
+	background-image: url("http://www.nannygoatsinpanties.com/wp-content/uploads/2013/03/sacramento-capitol-1000x1000.jpg");
+	border: 2px solid #D3D3D3;
 	border-radius: 20px;
 	height: 100%;
 	line-height: 35px;
-	padding: 10px 10 px 30px 10px;
+	padding: 10px 10 px 10px 10px;
 	text-align: left;
 	width: 345px;
 }
@@ -46,7 +45,7 @@ h1 {
   margin: 30px;
   border-radius: 20px;
   background-color: #ffffff;
-  border: 1px solid black;
+  border: 1px solid #D3D3D3;
   opacity: 0.6;
   filter: alpha(opacity=60); 
 }
