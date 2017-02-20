@@ -26,10 +26,40 @@
 
         </div>
 
-
-    	<!--This function contains everything that happens after the page loads but before our user interacts with our map-->
     	<script>
       		var map;
+            var markers = [];
+            //This is our view locations model
+            var locations = [{
+                title: "Capital",
+                location: {
+                    lat: 38.576828, 
+                    lng: -121.493605
+                },
+                image: 'img/capital.jpg',
+                content: 'Hello'
+            },
+            {
+                title: "Sutter's Fort",
+                location: {
+                    lat: 38.583689, 
+                    lng: -121.503856
+                },
+                image: 'img/capital.jpg',
+                content: 'Hii'
+            },
+            {
+                title: "Tester",
+                location: {
+                    lat: 44,
+                    lng: -111
+                },
+                image: 'img/capital.jpg',
+                content: 'Hay'
+            },
+
+        ];
+
       		function initMap() {
         	// Constructor creates a new map - only center and zoom are required.
         		map = new google.maps.Map(document.getElementById('map'), {
@@ -37,28 +67,21 @@
           			zoom: 13
         		}); 
 
-                var locations = new Array();
-                locations[0] = new google.maps.LatLng(38.576946, -121.493626);
-                locations[1] = new google.maps.LatLng(38.572534, -121.471202);
-                locations[2] = new google.maps.LatLng(38.580464, -121.484859);
+                var bounds = new google.maps.LatLngBounds();
+                var largeInfowindow = new google.mapsInfoWindow();
+                for (var i = 0; i < locations.length; i++) {
+                    //Get our position from our array of locations
+                    var position = locations[i].location;
+                    var content = locations[i].content;
+                    var marker = new google.maps.Marker({
+                        map: map,
 
-            
-
-                function setMarkers() {
-                    for(var i=0; i<locations.length; i++){
-                        locations[i] = new google.maps.Marker({
-                            position: locations[i],
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            title: "locations"+ i
-
-                        })
-
-                    }
+                    })
 
 
                 }
-                setMarkers();
+
+
 
       		}
                 
