@@ -60,7 +60,7 @@
         		}); 
                 //
                 //Create infowindow
-                var largeInfowindow = new google.maps.InfoWindow();
+                var infoWindow = new google.maps.InfoWindow();
                 maxWidth: 200;
                 //Create bounds that will be displayed on map
                 var bounds = new google.maps.LatLngBounds();
@@ -70,11 +70,11 @@
                     var content = locations[i].content;
                     var title = locations[i].title;
                     var position = locations[i].location;
+                    //Create new markers where their locations are at
                     var marker = new google.maps.Marker({
                     	title: title,
                         map: map,
                         position: position,
-                        content: content,
                         animation: google.maps.Animation.DROP,
                     });
                 //Push markers to the map
@@ -83,7 +83,7 @@
                 bounds.extend(marker.position);
                 //Open infowindow when marker is clicked
                 marker.addListener('click', function() {
-                    populateInfoWindow(this, largeInfowindow);
+                    populateInfoWindow(this, infoWindow);
                     toggleBounce(this, marker);
                 })    
 
@@ -138,14 +138,15 @@ $.ajax({
     dataType: "jsonp",
     success: function( response ) {
         var wikiStr = response[1];
-        var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
-        infowindow.setContent(marker.title + marker.content + URL);
+        var URL = 'http://en.wikipedia.org/wiki/' + wikiStr;
+        infowindow.setContent(marker.title + URL + marker.content);
         infowindow.open(map, maker);
-
 
     }
 
 
 })
+
+
 
 
