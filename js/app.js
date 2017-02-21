@@ -93,7 +93,7 @@
              function populateInfoWindow(marker, infowindow) {
                 if (infowindow.marker != marker) {
                     infowindow.marker = marker;
-                    infowindow.setContent('Hello');
+                    infowindow.setContent(marker.title);
                     infowindow.open(map, marker);
                     //Make infowindow close on second click
                     //infowindow.addListener('closeclick', function() {
