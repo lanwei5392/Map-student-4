@@ -138,8 +138,7 @@ $.ajax({
     dataType: "jsonp",
     success: function( response ) {
         var wikiStr = response[1];
-        var URL = 'http://en.wikipedia.org/wiki/' + wikiStr;
-        infowindow.setContent(marker.title + URL + marker.content);
+        infowindow.setContent(marker.title + wikiStr + marker.content);
         infowindow.open(map, maker);
 
     }
