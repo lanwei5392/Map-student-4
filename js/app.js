@@ -121,7 +121,21 @@
 //Wikipeida AJAX request:
 //Create wiki ur:
 var wikiUrl = 'http://en.wikipeida.org/w/api.php?action=opensearch&search=' + title + '&format=json&callback=wikiCallback';
-$.ajax({})
+//Create ajax request object
+$.ajax({
+    url: wikiUrl,
+    dataType: "jsonp",
+    success: function() ) {
+        var wikiList = response;
+        var wikipediaURL = 'http://en.wikipedia.org/' + marker.title;
+        infowindow.setContent(marker.title);
+        infowindow.open(map, maker);
+
+
+    }
+
+
+})
 
 
 var listViewModel = function() {
