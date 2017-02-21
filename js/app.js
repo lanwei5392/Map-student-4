@@ -118,6 +118,15 @@
 
       		}
 
+
+var listViewModel = function() {
+    this.listView = ko.observable();
+    //this.name = ko.observable();
+
+}
+
+ko.applyBindings(new listViewModel);
+
 //Wikipeida AJAX request:
 //Create wiki ur:
 var wikiUrl = 'http://en.wikipeida.org/w/api.php?action=opensearch&search=' + title + '&format=json&callback=wikiCallback';
@@ -136,15 +145,5 @@ $.ajax({
 
 
 })
-
-
-var listViewModel = function() {
-    this.listView = ko.observable();
-    this.name = ko.observable('First listing');
-
-}
-
-ko.applyBindings(new listViewModel);
-
 
 
