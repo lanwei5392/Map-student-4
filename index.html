@@ -86,8 +86,20 @@
                 bounds.extend(marker.position);
                 marker.addListener('click', function() {
                     populateInfoWindow(this, largeInfowindow);
+                    toggleBounce(this, marker);
                 })
 
+            }
+
+            map.fitBounds(bounds);
+
+            function toggleBounce(marker) {
+                //Create function to animate markers when clicked
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+                setTimeout(function() {
+                    marker.setAnimation(google.maps.Animation.null);
+                }, 200);
+                
             }
 
             function populateInfoWindow(marker, infowindow) {
