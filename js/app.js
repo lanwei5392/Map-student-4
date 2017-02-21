@@ -1,6 +1,7 @@
+//Define global map and markers variables
       		var map;
             var markers = [];
-            //This is our view locations model
+            //Our view, locations that we'll display
             var locations = [{
                 title: "Capital",
                 id: 0,
@@ -34,7 +35,6 @@
         ];
 
 
-
         	//Initialize map and markers
       		function initMap() {
         	// Constructor creates a new map - only center and zoom are required.
@@ -62,6 +62,7 @@
                         animation: google.maps.Animation.DROP,
                         id: i
                     });
+                //Push markers to the map
                 markers.push(marker);
                 bounds.extend(marker.position);
                 marker.addListener('click', function() {
@@ -71,14 +72,15 @@
 
             }
 
+            //Fit map to bounds
             map.fitBounds(bounds);
-
+            //Make markers bounce when clicked!
             function toggleBounce(marker) {
                 //Create function to animate markers when clicked
                 marker.setAnimation(google.maps.Animation.BOUNCE);
                 setTimeout(function() {
                     marker.setAnimation(google.maps.Animation.null);
-                }, 300);
+                }, 500);
                 
             }
 
