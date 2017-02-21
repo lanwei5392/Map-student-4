@@ -125,9 +125,9 @@ var wikiUrl = 'http://en.wikipeida.org/w/api.php?action=opensearch&search=' + ti
 $.ajax({
     url: wikiUrl,
     dataType: "jsonp",
-    success: function() ) {
-        var wikiList = response;
-        var wikipediaURL = 'http://en.wikipedia.org/' + marker.title;
+    success: function( response ) {
+        var wikiList = response[1];
+        var wikipediaURL = 'http://en.wikipedia.org/wiki/' + marker.title;
         infowindow.setContent(marker.title);
         infowindow.open(map, maker);
 
