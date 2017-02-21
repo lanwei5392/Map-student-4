@@ -111,6 +111,18 @@
             }
 
 
-
       		}
-                
+
+var listViewModel = function() {
+    this.listView = ko.observable();
+    this.name = ko.observable('First listing');
+
+}
+
+ko.applyBindings(new listViewModel);
+
+
+
+
+
+
