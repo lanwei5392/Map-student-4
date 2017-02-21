@@ -89,6 +89,19 @@
 
             }
 
+            //Function to display infowindow
+             function populateInfoWindow(marker, infowindow) {
+                if (infowindow.marker != marker) {
+                    infowindow.marker = marker;
+                    infowindow.open(map, marker);
+                    //Make infowindow close on second click
+                    //infowindow.addListener('closeclick', function() {
+                      //  infowindow.setMarker(null);
+                   // })
+                }
+
+            }           
+
             //Fit map to bounds
             map.fitBounds(bounds);
             //Make markers bounce when clicked!
@@ -99,17 +112,6 @@
                     marker.setAnimation(google.maps.Animation.null);
                 }, 500);
                 
-            }
-
-            function populateInfoWindow(marker, infowindow) {
-                if (infowindow.marker != marker) {
-                    infowindow.marker = marker;
-                    infowindow.open(map, marker);
-                    infowindow.addListener('closeclick', function() {
-                        infowindow.setMarker(null);
-                    })
-                }
-
             }
 
 
