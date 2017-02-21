@@ -40,7 +40,7 @@
                 content: 'Hello'
             },
             {
-                title: "Sutter's Fort",
+                title: "Old Sacramento",
                 location: {
                     lat: 38.583689, 
                     lng: -121.503856
@@ -49,10 +49,10 @@
                 content: 'Hii'
             },
             {
-                title: "Tester",
+                title: "Sutter's Fort",
                 location: {
-                    lat: 44,
-                    lng: -111
+                    lat: 38.572417, 
+                    lng: -121.471106
                 },
                 image: 'img/capital.jpg',
                 content: 'Hay'
@@ -79,7 +79,7 @@
                         position: position,
                         content: content,
                         title: title,
-                        animation: google.maps.Animation.BOUNCE,
+                        animation: google.maps.Animation.DROP,
                         id: i
                     });
                 markers.push(marker);
@@ -87,7 +87,6 @@
                 marker.addListener('click', function() {
                     populateInfoWindow(this, largeInfowindow);
                 })
-
 
             }
 
