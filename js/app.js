@@ -31,6 +31,24 @@
                 image: 'img/capital.jpg',
                 content: 'Hay'
             },
+            {
+            	title: "Crocker Art Museum",
+            	location: {
+            		lat: 38.577130, 
+            		lng: -121.505998,
+            	},
+            	image: 'img/capital.jpg',
+            	content: 'Content here'
+            },
+            {
+            	title: "Tower Bridge",
+            	location: {
+            		lat: 38.580721, 
+            		lng: -121.508011,
+            	},
+            	image: 'img/capital.jpg',
+            	content: 'Content here'
+            }
 
         ];
 
@@ -51,16 +69,15 @@
                 //Loop through our locations and display our markers
                 for (var i = 0; i < locations.length; i++) {
                     //Get our position from our array of locations
-                    var position = locations[i].location;
                     var content = locations[i].content;
                     var title = locations[i].title;
+                    var position = locations[i].location;
                     var marker = new google.maps.Marker({
                         map: map,
                         position: position,
                         content: content,
                         title: title,
                         animation: google.maps.Animation.DROP,
-                        id: i
                     });
                 //Push markers to the map
                 markers.push(marker);
