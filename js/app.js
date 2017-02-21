@@ -79,11 +79,13 @@
                     });
                 //Push markers to the map
                 markers.push(marker);
+                //Extend our map to where markers are
                 bounds.extend(marker.position);
+                //Open infowindow when marker is clicked
                 marker.addListener('click', function() {
                     populateInfoWindow(this, largeInfowindow);
                     toggleBounce(this, marker);
-                })
+                })    
 
             }
 
