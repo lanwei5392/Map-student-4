@@ -67,7 +67,7 @@
           			zoom: 13
         		}); 
                 //
-                var largeInfowindow = new google.mapsInfoWindow();
+                var largeInfowindow = new google.maps.InfoWindow();
                 var bounds = new google.maps.LatLngBounds();
                 for (var i = 0; i < locations.length; i++) {
                     //Get our position from our array of locations
@@ -80,7 +80,7 @@
                         title: title,
                         animation: google.maps.Animation.BOUNCE,
                         id: i
-                    })
+                    });
                 markers.push(marker);
                 bounds.extend(marker.position);
                 marker.addListener('click', function() {
@@ -88,9 +88,16 @@
                 })
 
 
-                }
+            }
 
             function populateInfoWindow(marker, infowindow) {
+                if (infowindow.marker != marker) {
+                    infowindow.marker = marker;
+                    infowindow.open(map, marker);
+                    infowindow.addListener('closeclick', function() {
+                        infowindow.setMarker(null);
+                    })
+                }
 
             }
 
