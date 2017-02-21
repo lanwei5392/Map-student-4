@@ -128,8 +128,10 @@ var listViewModel = function() {
 ko.applyBindings(new listViewModel);
 
 //Wikipeida AJAX request:
-//Create wiki ur:
-var wikiUrl = 'http://en.wikipeida.org/w/api.php?action=opensearch&search=' + title + '&format=json&callback=wikiCallback';
+
+//Create wiki url with our search string inside:
+var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
+
 //Create ajax request object
 $.ajax({
     url: wikiUrl,
