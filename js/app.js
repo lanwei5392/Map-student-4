@@ -4,54 +4,51 @@
             //Our view, locations that we'll display
             var locations = [{
                 title: "Capital",
-                id: 0,
+                image: 'img/capital.jpg',
+                content: 'Hello',
                 location: {
                     lat: 38.576828, 
                     lng: -121.493605
                 },
-                image: 'img/capital.jpg',
-                content: 'Hello'
             },
             {
                 title: "Old Sacramento",
-                id: 0,
+                image: 'img/capital.jpg',
+                content: 'Hii',
                 location: {
                     lat: 38.583689, 
                     lng: -121.503856
                 },
-                image: 'img/capital.jpg',
-                content: 'Hii'
             },
             {
                 title: "Sutter's Fort",
+                image: 'img/capital.jpg',
+                content: 'Hay',
                 location: {
                     lat: 38.572417, 
                     lng: -121.471106
                 },
-                image: 'img/capital.jpg',
-                content: 'Hay'
             },
             {
             	title: "Crocker Art Museum",
             	location: {
+            		image: 'img/capital.jpg',
+            		content: 'Content here',
             		lat: 38.577130, 
             		lng: -121.505998,
             	},
-            	image: 'img/capital.jpg',
-            	content: 'Content here'
             },
             {
             	title: "Tower Bridge",
+            	image: 'img/capital.jpg',
+            	content: 'Content here',
             	location: {
             		lat: 38.580721, 
             		lng: -121.508011,
             	},
-            	image: 'img/capital.jpg',
-            	content: 'Content here'
             }
 
         ];
-
 
         	//Initialize map and markers
       		function initMap() {
@@ -64,6 +61,7 @@
                 //
                 //Create infowindow
                 var largeInfowindow = new google.maps.InfoWindow();
+                maxWidth: 200;
                 //Create bounds that will be displayed on map
                 var bounds = new google.maps.LatLngBounds();
                 //Loop through our locations and display our markers
@@ -73,10 +71,10 @@
                     var title = locations[i].title;
                     var position = locations[i].location;
                     var marker = new google.maps.Marker({
+                    	title: title,
                         map: map,
                         position: position,
                         content: content,
-                        title: title,
                         animation: google.maps.Animation.DROP,
                     });
                 //Push markers to the map
@@ -111,6 +109,7 @@
                 }
 
             }
+
 
 
       		}
