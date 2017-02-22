@@ -165,9 +165,26 @@
             }
 
 
+var Landmark = function(data) {
+    this.name = ko.observable(data.title);
+}
+
+
+
 var listViewModel = function() {
-    this.listView = ko.observable();
-    //this.name = ko.observable();
+    var self = this;
+
+    this.landmarkList = ko.observableArray([]);
+
+    locations.forEach(function(landmarkItem){
+        self.landmarkList.push( new Landmark(landmarkItem) );
+        
+    })
+    this.currentLandmark = ko.observable( this.landmarkList() [0]);
+
+    this.setLandmark = function(clickedLandmark) {
+        self.currentLandmark(clickedLandmark);
+    }
 }
 
 
