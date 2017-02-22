@@ -3,7 +3,7 @@
             var markers = [];
             //Our view, locations that we'll display
             var locations = [{
-                title: "Capital",
+                title: "California State Capital",
                 image: 'img/capital.jpg',
                 content: 'Hello',
                 location: {
