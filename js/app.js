@@ -79,6 +79,7 @@
                     });
                 //Push markers to the map
                 markers.push(marker);
+                locations[i].marker = marker;
                 //Extend our map to where markers are
                 bounds.extend(marker.position);
                 //Open infowindow when marker is clicked
