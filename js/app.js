@@ -101,6 +101,10 @@
                     //infowindow.addListener('closeclick', function() {
                       //  infowindow.setMarker(null);
                    // })
+                    var streetViewService = new google.maps.StreetViewService();
+                    var raidus = 50;
+
+
 
                     //Create wiki url with our search string inside:
                     var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
