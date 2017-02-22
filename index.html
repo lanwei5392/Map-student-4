@@ -16,9 +16,15 @@
                      <input type="text" id="hide-listings" value="">
                      <button id="submit-btn">Submit</button>
                  </form>
-                    <div>
-                        <ul data-bind="text: name"></ul>
+
+                    <ul data-bind="foreach: landmarkList">
+                        <li data-bind="text: name, click: $parent.setLandmark"></li>
+                    </ul>
+
+                    <div data-bind="with:currentLandmark">
+                        <h3 data-bind="text: title"></h3>
                     </div>
+
             </div>
 
             <div id="map"></div>
