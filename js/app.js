@@ -121,9 +121,7 @@
                     }
 
 
-
-
-
+                    streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
 
 
 
