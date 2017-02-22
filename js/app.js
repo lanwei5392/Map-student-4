@@ -134,10 +134,9 @@
                         url: wikiUrl,
                         dataType: "jsonp",
                         success: function( response ) {
-                            console.log(response);
                             var wikiStr = response[1];
                             var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
-                            infowindow.setContent('<h2>' + marker.title + '</h2>' + '<p>' + '<a href="' + wikipediaURL + '">' + '</p><p>' + response[2] + '</p>');
+                            infowindow.setContent('<h2>' + marker.title + '</h2>' + '</div><div id="pano"></div>' + '<p>' + '<a href="' + wikipediaURL + '">' + '</p><p>' + response[2] + '</p>');
                             infowindow.open(map, marker);
 
                         },
