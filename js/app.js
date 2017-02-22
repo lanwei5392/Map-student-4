@@ -101,6 +101,26 @@
                     var streetViewService = new google.maps.StreetViewService();
                     var radius = 50;
 
+                    function getStreetView(data, status) {
+                        if (status == google.maps.StreetViewStatus.OK) {
+                            var nearStreetViewLocation = data.location.latLng;
+                            var heading = google.maps.geometry.spherical.computeHeading(nearStreetViewLocation, marker.position);
+                            //Possibly set infowindow here?
+                            var panoramaOptions = {
+                                position: nearStreetViewLocation,
+                                pov: {
+                                    heading: heading,
+                                    pitch: 30
+                                }
+                            };
+                            var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+                        } else {
+                            infowindow.setContent('<div>' + marker.title + '</div>' + '<div>No Street View Found!</div');
+                        }
+                        
+                    }
+
+
 
 
 
