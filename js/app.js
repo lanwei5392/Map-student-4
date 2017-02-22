@@ -1,5 +1,5 @@
 //Define global map and markers variables
-      		var map;
+            var map;
             var markers = [];
             //Our view, locations that we'll display
             var locations = [{
@@ -30,34 +30,34 @@
                 },
             },
             {
-            	title: "Crocker Art Museum",
-            	location: {
-            		image: 'img/capital.jpg',
-            		content: 'Content here',
-            		lat: 38.577130, 
-            		lng: -121.505998,
-            	},
+                title: "Crocker Art Museum",
+                location: {
+                    image: 'img/capital.jpg',
+                    content: 'Content here',
+                    lat: 38.577130, 
+                    lng: -121.505998,
+                },
             },
             {
-            	title: "Tower Bridge",
-            	image: 'img/capital.jpg',
-            	content: 'Content here',
-            	location: {
-            		lat: 38.580721, 
-            		lng: -121.508011,
-            	},
+                title: "Tower Bridge",
+                image: 'img/capital.jpg',
+                content: 'Content here',
+                location: {
+                    lat: 38.580721, 
+                    lng: -121.508011,
+                },
             }
 
         ];
 
-        	//Initialize map and markers
-      		function initMap() {
-        	// Constructor creates a new map - only center and zoom are required.
-        		map = new google.maps.Map(document.getElementById('map'), {
-        			//Set center of map
-        			center: {lat: 38.576661, lng: -121.493637},
-          			zoom: 13
-        		}); 
+            //Initialize map and markers
+            function initMap() {
+            // Constructor creates a new map - only center and zoom are required.
+                map = new google.maps.Map(document.getElementById('map'), {
+                    //Set center of map
+                    center: {lat: 38.576661, lng: -121.493637},
+                    zoom: 13
+                }); 
                 //
                 //Create infowindow
                 var largeInfowindow = new google.maps.InfoWindow();
@@ -72,7 +72,7 @@
                     var position = locations[i].location;
                     //Create new markers where their locations are at
                     var marker = new google.maps.Marker({
-                    	title: title,
+                        title: title,
                         map: map,
                         position: position,
                         animation: google.maps.Animation.DROP,
@@ -140,7 +140,7 @@
             }
 
 
-      		}
+            }
 
 
 var listViewModel = function() {
