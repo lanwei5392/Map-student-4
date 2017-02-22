@@ -96,6 +96,7 @@
                     infowindow.marker = marker;
                     //infowindow.setContent(wikiURL);
                     infowindow.open(map, marker);
+                    infowindow.setContent('Loading...');
                     //Make infowindow close on second click
                     //infowindow.addListener('closeclick', function() {
                       //  infowindow.setMarker(null);
