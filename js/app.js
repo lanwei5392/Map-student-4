@@ -39,7 +39,7 @@
                 },
             },
             {
-                title: "Tower Bridge",
+                title: "Tower Bridge California",
                 image: 'img/capital.jpg',
                 content: 'Content here',
                 location: {
