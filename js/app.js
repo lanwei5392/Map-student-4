@@ -101,6 +101,28 @@
                     //infowindow.addListener('closeclick', function() {
                       //  infowindow.setMarker(null);
                    // })
+
+                    //Create wiki url with our search string inside:
+                    var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
+
+
+                    //Create ajax request object
+                    $.ajax({
+                        url: wikiUrl,
+                        dataType: "jsonp",
+                        success: function( response ) {
+                            console.log(response);
+                            var wikiStr = response[1];
+                            var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
+                            infowindow.setContent('<h2>' + marker.title + '</h2>' + '<p>' + wikipediaURL + '</p><p>' + response[2] + '</p>');
+                            infowindow.open(map, marker);
+
+                        },
+                        error: function(msg) {
+                            console.log(msg);
+                        }
+
+                    });
                 }
 
             }           
@@ -124,29 +146,12 @@
 var listViewModel = function() {
     this.listView = ko.observable();
     //this.name = ko.observable();
-
 }
 
-ko.applyBindings(new listViewModel);
 
-//Wikipeida AJAX request:
+ko.applyBindings(new listViewModel());
 
-//Create wiki url with our search string inside:
-var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
 
-//Create ajax request object
-$.ajax({
-    url: wikiUrl,
-    dataType: "jsonp",
-    success: function( response ) {
-        var wikiStr = response[1];
-        var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
-        infowindow.setContent(marker.title + URL + marker.content);
-        infowindow.open(map, maker);
-
-    }
-
-})
 
 
 
