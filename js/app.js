@@ -165,6 +165,12 @@
             }
 
 
+var Landmark = function(data) {
+    this.name = ko.observable(data.title);
+}
+
+
+
 var listViewModel = function() {
     this.listView = ko.observable();
     //this.name = ko.observable();
