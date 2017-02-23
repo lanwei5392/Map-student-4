@@ -121,8 +121,6 @@
                     }
 
 
-                    streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
-
 
 
                     //Create wiki url with our search string inside:
@@ -138,6 +136,7 @@
                             var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
                             infowindow.setContent('<h2>' + marker.title + '</h2>' + '</div><div id="pano"></div>' + '<p>' + '<a href="' + wikipediaURL + '">' + '</p><p>' + response[2] + '</p>');
                             infowindow.open(map, marker);
+                            streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
 
                         },
                         error: function(msg) {
@@ -178,7 +177,7 @@ var listViewModel = function() {
 
     locations.forEach(function(landmarkItem){
         self.landmarkList.push( new Landmark(landmarkItem) );
-        
+
     })
     this.currentLandmark = ko.observable( this.landmarkList() [0]);
 
