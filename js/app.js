@@ -46,6 +46,41 @@
                     lat: 38.580721, 
                     lng: -121.508011,
                 },
+            },
+            {
+                title: "California Automobile Museum",
+                location: {
+                    lat: 38.570475, 
+                    lng: -121.511816,
+                },
+            },
+            {
+                title: "The Sacramento Bee",
+                location: {
+                    lat: 38.580550, 
+                    lng: -121.494843,
+                },
+            },
+            {
+                title: "Sacramento Masonic Temple",
+                location: {
+                    lat: 38.580151, 
+                    lng: -121.491164,
+                },
+            },
+            {
+                title: "California State Railroad Museum",
+                location: {
+                    lat: 38.584863, 
+                    lng: -121.504125,
+                },
+            }, 
+            {
+                title: "Governor's Mansion State Historic Park",
+                location: {
+                    lat: 38.580317, 
+                    lng: -121.484769,
+                },
             }
 
         ];
