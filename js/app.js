@@ -13,8 +13,6 @@
             },
             {
                 title: "Old Sacramento State Historic Park",
-                image: 'img/capital.jpg',
-                content: 'Hii',
                 location: {
                     lat: 38.583689, 
                     lng: -121.503856
@@ -22,8 +20,6 @@
             },
             {
                 title: "Sutter's Fort",
-                image: 'img/capital.jpg',
-                content: 'Hay',
                 location: {
                     lat: 38.572417, 
                     lng: -121.471106
@@ -32,16 +28,12 @@
             {
                 title: "Crocker Art Museum",
                 location: {
-                    image: 'img/capital.jpg',
-                    content: 'Content here',
                     lat: 38.577130, 
                     lng: -121.505998,
                 },
             },
             {
                 title: "Tower Bridge California",
-                image: 'img/capital.jpg',
-                content: 'Content here',
                 location: {
                     lat: 38.580721, 
                     lng: -121.508011,
