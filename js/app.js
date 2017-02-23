@@ -12,7 +12,7 @@
                 },
             },
             {
-                title: "Old Sacramento",
+                title: "Old Sacramento State Historic Park",
                 image: 'img/capital.jpg',
                 content: 'Hii',
                 location: {
