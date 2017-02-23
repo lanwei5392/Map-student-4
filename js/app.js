@@ -113,7 +113,7 @@
                 marker.addListener('click', function() {
                     populateInfoWindow(this, largeInfowindow);
                     toggleBounce(this, marker);
-                })    
+                })  
 
             }
 
@@ -146,8 +146,6 @@
                         }
                         
                     }
-
-
 
 
                     //Create wiki url with our search string inside:
@@ -193,8 +191,8 @@
 
 var Landmark = function(data) {
     this.name = ko.observable(data.title);
+    this.clickList = ko.observable(data.marker);
 }
-
 
 
 var listViewModel = function() {
@@ -207,6 +205,11 @@ var listViewModel = function() {
 
     })
     this.currentLandmark = ko.observable( this.landmarkList() [0]);
+
+    this.openMarker = function() {
+        self.currentLandmark().landmarkList(self.currentLandmark().landmarkList());
+    }
+
 
     this.setLandmark = function(clickedLandmark) {
         self.currentLandmark(clickedLandmark);
