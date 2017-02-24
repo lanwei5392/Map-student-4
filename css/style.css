@@ -3,7 +3,6 @@
 	position: relative;
 }
 
-
 html, body {
 	height: 100%;
 	maring: 0;
@@ -46,6 +45,7 @@ h1 {
 }
 
 .landmarkList {
+
   margin-right: 50px;
   background-color: #ffffff;
   border: 1px solid #D3D3D3;
@@ -69,4 +69,20 @@ h1 {
     width: 200px;
     height: 200px;
 }
+
+
+
+@media only screen and (max-width: 750px) {
+	#map {
+		width: 90px;
+		display: block;
+		height: 100%
+	}
+}
+
+
+
+
+
+
 
