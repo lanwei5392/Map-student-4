@@ -211,6 +211,7 @@ var ViewModel = function() {
 
     })
 
+    //Create observalbe
     self.searchItem = ko.observable('');
     self.searchFilter = function(value) {
         self.landmarkList.removeAll();
@@ -220,6 +221,26 @@ var ViewModel = function() {
             }
         }
     }
+
+    self.markerFilter = function(value) {
+        for (var i in locations) {
+            if (locations[i].marker.setMap(map) !== null) {
+                locations[i].marker.setMap(null);
+            }
+            if (locations[i].marker.title.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                locations[i].marker.setMap(map);
+            }
+        }
+    }
+
+    self.displayListMarkers = function(clickedItem) {
+        var index = clickedItem.id;
+        var location = location.id;
+        var marker = clickedItem.marker;
+        google.maps.event.trigger(marker, 'click');
+    }
+
+
 
 
 }
