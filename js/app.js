@@ -246,7 +246,7 @@ var ViewModel = function() {
     }
 
 
-    //Couple our search items with our search and marker filter functions
+    //Couple our search items with our search/marker filter functions
     self.searchItem.subscribe(self.searchFilter);
     self.searchItem.subscribe(self.markerFilter);
 
