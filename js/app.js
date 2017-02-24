@@ -186,6 +186,8 @@
                 
             }
 
+            //Apply bindings so model will update when events are clicked
+            ko.applyBindings(new ViewModel());
 
             }
 
@@ -246,9 +248,6 @@ var ViewModel = function() {
     self.searchItem.subscribe(self.markerFilter);
 
 }
-
-
-ko.applyBindings(new ViewModel());
 
 
 
