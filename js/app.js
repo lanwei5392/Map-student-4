@@ -106,7 +106,7 @@
                         animation: google.maps.Animation.DROP,
                     });
                 //Push markers to the map
-                markers.push(marker);
+                //markers.push(marker);
                 locations[i].marker = marker;
                 //Extend our map to where markers are
                 bounds.extend(marker.position);
