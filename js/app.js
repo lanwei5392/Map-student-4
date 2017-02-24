@@ -211,6 +211,17 @@ var ViewModel = function() {
 
     })
 
+    self.searchItem = ko.observable('');
+    self.searchFilter = function(value) {
+        self.landmarkList.removeAll();
+        for (var i in locations) {
+            if (locations[i].title.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                self.landmarkList.push(locations[i]);
+            }
+        }
+    }
+
+
 }
 
 
