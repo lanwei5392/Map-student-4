@@ -239,9 +239,10 @@ var ViewModel = function() {
         var marker = clickedItem.marker;
         google.maps.event.trigger(marker, 'click');
     }
-
-
-
+    
+    //Couple our search items with our search and marker filter functions
+    self.searchItem.publish(self.searchFilter);
+    self.searchItem.publish(self.markerFilter);
 
 }
 
