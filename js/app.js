@@ -198,7 +198,8 @@ var Landmark = function(data) {
 var listViewModel = function() {
     var self = this;
 
-    this.landmarkList = ko.observableArray([]);
+    self.landmarkList = ko.observableArray([]);
+
 
     locations.forEach(function(landmarkItem){
         self.landmarkList.push( new Landmark(landmarkItem) );
@@ -206,9 +207,6 @@ var listViewModel = function() {
     })
     this.currentLandmark = ko.observable( this.landmarkList() [0]);
 
-    this.openMarker = function() {
-        self.currentLandmark().landmarkList(self.currentLandmark().landmarkList());
-    }
 
 
     this.setLandmark = function(clickedLandmark) {
