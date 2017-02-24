@@ -247,7 +247,7 @@ var ViewModel = function() {
 }
 
 
-ko.applyBindings(new listViewModel());
+ko.applyBindings(new ViewModel());
 
 
 
