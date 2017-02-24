@@ -191,6 +191,10 @@
 
 
 var Landmark = function(locationData, id) {
+    this.marker = locationData.marker;
+    this.title = locationData.title;
+    this.lat = locationData.location.lat;
+    this.id = id;
 
 }
 
