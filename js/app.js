@@ -116,6 +116,7 @@
                     toggleBounce(this, marker);
                 })  
 
+
             }
 
             //Function to display infowindow
@@ -213,7 +214,15 @@ var ViewModel = function() {
 
     })
 
-    //Create observalbe
+
+    self.clickedListMarkers = function(clickedItem) {
+        var index = clickedItem.id;
+        var marker = clickedItem.marker;
+        google.maps.event.trigger(marker, 'click');
+    }
+
+
+    //Create observable
     self.searchItem = ko.observable('');
     self.searchFilter = function(value) {
         self.landmarkList.removeAll();
@@ -222,13 +231,6 @@ var ViewModel = function() {
                 self.landmarkList.push(locations[i]);
             }
         }
-    }
-
-        self.displayListMarkers = function(clickedItem) {
-        var index = clickedItem.id;
-        var location = location.id;
-        var marker = clickedItem.marker;
-        google.maps.event.trigger(marker, 'click');
     }
     
 
