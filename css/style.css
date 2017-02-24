@@ -63,6 +63,7 @@ h1 {
 .form-container {
 	margin-top: 20px;
 	margin-left: 50px;
+
 }
 
 #pano {
@@ -70,18 +71,19 @@ h1 {
     height: 200px;
 }
 
-
-
 @media only screen and (max-width: 750px) {
 	#map {
 		width: 90px;
 		display: block;
 		height: 100%
 	}
+
+	.sidebar {
+		overflow: hidden;
+	}
+
+
 }
-
-
-
 
 
 
