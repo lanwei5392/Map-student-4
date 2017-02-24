@@ -190,14 +190,13 @@
             }
 
 //Just as we created our cat constructor, we now create our landmark constructor
-var Landmark = function(locationData, id) {
-    this.marker = locationData.marker;
-    this.title = locationData.title;
-    this.lat = locationData.location.lat;
+var Landmark = function(location, id) {
+    this.marker = location.marker;
+    this.title = location.title;
+    this.lat = location.location.lat;
     this.id = id;
 
 }
-
 
 //Create our view model
 var ViewModel = function() {
@@ -222,6 +221,14 @@ var ViewModel = function() {
         }
     }
 
+        self.displayListMarkers = function(clickedItem) {
+        var index = clickedItem.id;
+        var location = location.id;
+        var marker = clickedItem.marker;
+        google.maps.event.trigger(marker, 'click');
+    }
+    
+
     self.markerFilter = function(value) {
         for (var i in locations) {
             if (locations[i].marker.setMap(map) !== null) {
@@ -233,16 +240,10 @@ var ViewModel = function() {
         }
     }
 
-    self.displayListMarkers = function(clickedItem) {
-        var index = clickedItem.id;
-        var location = location.id;
-        var marker = clickedItem.marker;
-        google.maps.event.trigger(marker, 'click');
-    }
-    
+
     //Couple our search items with our search and marker filter functions
-    self.searchItem.publish(self.searchFilter);
-    self.searchItem.publish(self.markerFilter);
+    self.searchItem.subscribe(self.searchFilter);
+    self.searchItem.subscribe(self.markerFilter);
 
 }
 
