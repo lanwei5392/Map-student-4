@@ -100,6 +100,7 @@
                     //Create new markers where their locations are at
                     var marker = new google.maps.Marker({
                         title: title,
+                        id: i,
                         map: map,
                         position: position,
                         animation: google.maps.Animation.DROP,
@@ -189,7 +190,9 @@
             }
 
 
-var Landmark = function() {
+var Landmark = function(locationData, id) {
+
+}
 
 
 
