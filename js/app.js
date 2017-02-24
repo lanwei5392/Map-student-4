@@ -151,7 +151,7 @@
 
 
                     //Create wiki url with our search string inside:
-                    var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
+                    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
 
 
                     //Create ajax request object
