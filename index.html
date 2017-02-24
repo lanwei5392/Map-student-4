@@ -12,10 +12,8 @@
             <div class="sidebar">
                 <h1>Sacramento Landmarks</h1>
                 <div class="listings">
-                    <form id="form-container" class="form-container">
-                     <input type="text" id="hide-listings" value="">
-                     <button id="submit-btn">Submit</button>
-                 </form>
+                    <input class='searchbar' type="text" name="search" placeholder="Search!" autocomplete='off' data-bind='textInput: inputItem'>
+                </div>
 
                     <ul data-bind="foreach: landmarkList">
                         <!--Comment out until I write the function<li class='landmarkList-group-item' data-bind="text: title, click: $parent.dispayListMarkers"></li>
