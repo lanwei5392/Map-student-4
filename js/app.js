@@ -200,7 +200,7 @@ var Landmark = function(locationData, id) {
 
 
 
-var listViewModel = function() {
+var ViewModel = function() {
     var self = this;
 
     self.landmarkList = ko.observableArray([]);
