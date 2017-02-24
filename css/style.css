@@ -39,6 +39,10 @@ h1 {
 	width: 345px;
 }
 
+.searchbar {
+	width: 250px;
+	margin-left: 10px;
+}
 
 .listings {
   margin: 30px;
