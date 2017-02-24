@@ -151,7 +151,7 @@
 
 
                     //Create wiki url with our search string inside:
-                    var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
+                    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title;
 
 
                     //Create ajax request object
@@ -160,7 +160,7 @@
                         dataType: "jsonp",
                         success: function( response ) {
                             var wikiStr = response[1];
-                            var wikipediaURL = 'http://en.wikipedia.org/wiki/' + wikiStr;
+                            var wikipediaURL = 'https://en.wikipedia.org/wiki/' + wikiStr;
                             infowindow.setContent('<h2>' + marker.title + '</h2>' + '</div><div id="pano"></div>' + '<p>' + '<a href="' + wikipediaURL + '">' + '</p><p>' + response[2] + '</p>');
                             infowindow.open(map, marker);
                             streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
