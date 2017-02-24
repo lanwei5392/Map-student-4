@@ -189,10 +189,8 @@
             }
 
 
-var Landmark = function(data) {
-    this.name = ko.observable(data.title);
-    this.clickList = ko.observable(data.marker);
-}
+var Landmark = function() {
+
 
 
 var listViewModel = function() {
@@ -205,13 +203,7 @@ var listViewModel = function() {
         self.landmarkList.push( new Landmark(landmarkItem) );
 
     })
-    this.currentLandmark = ko.observable( this.landmarkList() [0]);
 
-
-
-    this.setLandmark = function(clickedLandmark) {
-        self.currentLandmark(clickedLandmark);
-    }
 }
 
 
