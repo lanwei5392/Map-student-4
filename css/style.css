@@ -42,14 +42,20 @@ h1 {
 .searchbar {
 	width: 250px;
 	margin-left: 10px;
+
 }
 
-.listings {
-  margin: 30px;
+.landmarkList {
+  margin-right: 50px;
   background-color: #ffffff;
   border: 1px solid #D3D3D3;
   opacity: 0.6;
   filter: alpha(opacity=60); 
+}
+
+.search-bar-main {
+  margin: 30px;
+  
 }
 
 
