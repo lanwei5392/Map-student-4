@@ -196,6 +196,7 @@ var Landmark = function(location, id) {
     this.marker = location.marker;
     this.title = location.title;
     this.lat = location.location.lat;
+    this.lng = location.location.lng;
     this.id = id;
 
 }
