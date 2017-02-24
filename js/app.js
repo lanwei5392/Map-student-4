@@ -189,7 +189,7 @@
 
             }
 
-
+//Just as we created our cat constructor, we now create our landmark constructor
 var Landmark = function(locationData, id) {
     this.marker = locationData.marker;
     this.title = locationData.title;
@@ -199,13 +199,13 @@ var Landmark = function(locationData, id) {
 }
 
 
-
+//Create our view model
 var ViewModel = function() {
     var self = this;
 
     self.landmarkList = ko.observableArray([]);
 
-
+//Create a landmark for each landmark
     locations.forEach(function(landmarkItem){
         self.landmarkList.push( new Landmark(landmarkItem) );
 
