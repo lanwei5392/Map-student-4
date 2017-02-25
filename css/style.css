@@ -29,6 +29,7 @@ h1 {
 }
 
 .sidebar {
+	position: absolute;
 	background-image: url(capital.jpg);
 	border: 2px solid #D3D3D3;
 	height: 100%;
@@ -38,14 +39,14 @@ h1 {
 	width: 345px;
 }
 
-.searchbar {
-	width: 250px;
-	margin-left: 10px;
-
+.search{
+	margin-left: 100px;
 }
+
 
 .landmarkList {
 
+  overflow: hidden;
   margin-right: 50px;
   background-color: #ffffff;
   border: 1px solid #D3D3D3;
@@ -54,8 +55,6 @@ h1 {
 
 }
 
-.search-bar-main {
-  margin: 30px;
   
 }
 
@@ -71,22 +70,13 @@ h1 {
     height: 200px;
 }
 
-@media only screen and (max-width: 750px) {
-	#map{
-    	height: 400px;
-    	overflow: hidden;
-    	padding-bottom: 100%;
-    	padding-top: 30px;
-    	position: relative;
-	}
 
-	.sidebar {
-		overflow: hidden;
-	}
 
+@media screen and (max-width: 800px) {
+    .container {
+    display: flex;
+    flex-flow: column wrap;
+    }
 
 }
-
-
-
 
