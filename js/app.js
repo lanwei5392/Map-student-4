@@ -144,7 +144,7 @@
                             };
                             var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
                         } else {
-                            infowindow.setContent('<div>' + marker.title + '</div>' + '<div>No Street View Found!</div');
+                            infowindow.setContent('<div>' + marker.title + '</div>' + '<div>No Street View Found!</div>');
                         }
                         
                     }
